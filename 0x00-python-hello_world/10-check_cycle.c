@@ -13,7 +13,7 @@ int check_cycle(listint_t *list)
 listint_t *i = list, *j = list;
 
 
-while (i != NULL && j != NULL && j->next != NULL)
+while (j != NULL && j->next != NULL)
 {
 i = i->next;
 j = j->next->next;
