@@ -17,8 +17,8 @@ while (j != NULL && j->next != NULL)
 {
 i = i->next;
 j = j->next->next;
-    
-if(i == j)
+
+if (i == j)
 {
 
 return (1);
