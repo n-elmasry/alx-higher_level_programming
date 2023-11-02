@@ -7,4 +7,3 @@ arg_sum = 0
 for arg in arguments:
     arg_sum += int(arg)
 print(arg_sum)
-
