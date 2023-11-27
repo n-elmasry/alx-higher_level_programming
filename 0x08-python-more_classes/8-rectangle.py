@@ -48,7 +48,7 @@ class Rectangle:
     # perimeter
 
     def perimeter(self):
-        if self.__height == 0 or self.__width:
+        if self.__height == 0 or self.__width == 0:
             return 0
         else:
             return ((self.__height + self.__width) * 2)
@@ -79,13 +79,12 @@ class Rectangle:
 
         if not isinstance(rect_1, Rectangle):
             raise TypeError('rect_1 must be an instance of Rectangle')
-        if not isinstance(rect_2, Rectangle):
+        elif not isinstance(rect_2, Rectangle):
             raise TabError('rect_2 must be an instance of Rectangle')
 
         result1 = rect_1.area()
         result2 = rect_2.area()
-
         if result1 >= result2:
             return rect_1
-        else:
+        elif result1 < result2:
             return rect_2
