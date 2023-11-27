@@ -49,7 +49,9 @@ class Rectangle:
         else:
             return ((self.__height + self.__width) * 2)
     # override function
+
     def __str__(self):
+
         if self.__width == 0 or self.__height == 0:
             return ""
 
@@ -57,6 +59,6 @@ class Rectangle:
         for i in range(self.__height):
             for j in range(self.__width):
                 result += '#'
-            if i < self.__height - 1:  # Check if it's not the last iteration
+            if i < self.__height - 1:
                 result += '\n'
         return result
