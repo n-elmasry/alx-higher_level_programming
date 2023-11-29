@@ -1,4 +1,9 @@
+#!/usr/bin/python3
+"""  prints a text with 2 new lines after special characters """
+
+
 def text_indentation(text):
+    """  prints a text with 2 new lines after special characters """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
