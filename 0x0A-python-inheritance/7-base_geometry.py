@@ -4,8 +4,7 @@
 
 class BaseGeometry:
     """ a class BaseGeometry """
-    def __init__(self) -> None:
-        pass
+    pass
 
     def area(self):
         raise Exception('area() is not implemented')
