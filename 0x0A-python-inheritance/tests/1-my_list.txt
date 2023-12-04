@@ -1,0 +1,19 @@
+doctest for 1-my_list.py
+============================
+``print_sorted()``  that prints the list, but sorted (ascending sort)
+
+SUCCESSFUL TEST CONDITIONS
+==========================
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(6)
+>>> my_list.append(45)
+>>> my_list.append(-4)
+>>> my_list.append(0)
+>>> print(my_list)
+[1, 6, 45, -4, 0]
+>>> my_list.print_sorted()
+[-4, 0, 1, 6, 45]
+>>> print(my_list)
+[1, 6, 45, -4, 0]
