@@ -6,6 +6,6 @@ def write_file(filename="", text=""):
     """ write to a text file """
     with open(filename, 'w', encoding='utf-8') as fle:
         fle.write(text)
-        num = len(text) + 1
- 
-    return num
+    with open(filename, 'r', encoding='utf-8') as file:
+        content = file.read()
+        return len(content) 
