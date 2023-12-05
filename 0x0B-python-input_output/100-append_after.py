@@ -7,7 +7,7 @@ def append_after(filename="", search_string="", new_string=""):
     with open(filename, 'r+') as fle:
         lines = fle.readlines()
         fle.seek(0)
-        
+
         for line in lines:
             fle.write(line)
             if search_string in line:
