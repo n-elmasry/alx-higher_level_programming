@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""  appends a string at the end of a text file and returns the number of characters added """
+"""  appends a string to text file, returns the number of characters added """
 
 
 def append_write(filename="", text=""):
