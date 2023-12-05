@@ -14,9 +14,9 @@ class Student:
         newdict = {}
 
         if isinstance(attrs, list):
-            for atrr in atrrs:
+            for attr in atrrs:
                 if hasattr(self, attr):
-                    newdict[atrr] = getattr(self, attr)
+                    newdict[attr] = getattr(self, attr)
 
         else:
             newdict = {
