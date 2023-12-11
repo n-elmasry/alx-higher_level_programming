@@ -93,5 +93,3 @@ class TestBase(unittest.TestCase):
         result = Base.load_from_file()
         self.assertEqual(result, [])
 
-if __name__ == "__main__":
-    unittest.main()
