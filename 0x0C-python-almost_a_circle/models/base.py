@@ -27,7 +27,11 @@ class Base:
     # class methos save_to_file
     @classmethod
     def save_to_file(cls, list_objs):
-        if list_objs is None or len(list_objs) == 0:
+        if (
+            list_objs is None
+            or not isinstance(list_objs, list)
+            or len(list_objs) == 0
+        ):
             jsstring = "[]"
         else:
             jsstring = cls.to_json_string(
@@ -48,7 +52,7 @@ class Base:
     # class method create
     @classmethod
     def create(cls, **dictionary):
-        dummy = cls(1, 1)
+        dummy = cls(**dictionary)
         dummy.update(**dictionary)
         return dummy
 
