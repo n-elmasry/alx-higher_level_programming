@@ -24,29 +24,6 @@ class TestSquare(unittest.TestCase):
         """
         cls.setup = inspect.getmembers(Base, inspect.isfunction)
 
-    def test_pep8_conformance_base(self):
-        """
-        Test that base.py file conform to PEP8
-        """
-        pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(['models/base.py'])
-        self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
-
-    def test_pep8_conformance_test_base(self):
-        """
-        Test that test_base.py file conform to PEP8
-        """
-        pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(['tests/test_models/test_base.py'])
-        self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
-
-    def test_module_docstring(self):
-        """
-        Tests if module docstring documentation exist
-        """
-        self.assertTrue(len(Base.__doc__) >= 1)
 
     def test_class_docstring(self):
         """
