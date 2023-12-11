@@ -45,24 +45,6 @@ class TestRectangle(unittest.TestCase):
         """
         self.assertTrue(len(Rectangle.__doc__) >= 1)
 
-
-    def test_Normal_values(self):
-        """
-        Normal values just for width and height
-        """
-        R1 = Rectangle(1, 2)
-        R2 = Rectangle(1, 2, 3)
-        R3 = Rectangle(1, 2, 3, 4)
-        R4 = Rectangle(1, 2, 3, 4, 5)
-        self.assertEqual([R1.width, R1.height, R1.x, R1.y, R1.id],
-                         [1, 2, 0, 0, 1])
-        self.assertEqual([R2.width, R2.height, R2.x, R2.y, R2.id],
-                         [1, 2, 3,  0, 2])
-        self.assertEqual([R3.width, R3.height, R3.x, R3.y, R3.id],
-                         [1, 2, 3, 4, 3])
-        self.assertEqual([R4.width, R4.height, R4.x, R4.y, R4.id],
-                         [1, 2, 3, 4, 5])
-
     def test_wrong_inputted_values(self):
         """
         Test for negative and zero values

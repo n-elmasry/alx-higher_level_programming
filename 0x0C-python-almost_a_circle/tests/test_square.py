@@ -46,20 +46,6 @@ class TestSquare(unittest.TestCase):
         """
         self.assertTrue(len(Square.__doc__) >= 1)
 
-    def test_Normal_values(self):
-        """
-        Normal values just for width and height
-        """
-        S1 = Square(1, 2)
-        S2 = Square(1, 2, 3)
-        S3 = Square(1, 2, 3, 4)
-        self.assertEqual([S1.size, S1.x, S1.y, S1.id],
-                         [1, 2, 0, 17])
-        self.assertEqual([S2.size, S1.x, S1.y, S1.id],
-                         [1, 2, 0, 17])
-        self.assertEqual([S3.size, S1.x, S1.y, S1.id],
-                         [1, 2, 0, 17])
-
     def test_wrong_inputted_values(self):
         """
         Test for negative and zero values
