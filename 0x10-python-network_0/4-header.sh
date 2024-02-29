@@ -1,3 +1,3 @@
 #!/bin/bash
-# sends a DELETE request to the URL, and displays the body of the response
-curl -sH "X-School-User-Id:98" "$1"
+# sends a POST request to the passed URL, and displays the body of the response
+curl -sd "email=test@gmail.com&subject=I will always be here for PLD" "$1"
