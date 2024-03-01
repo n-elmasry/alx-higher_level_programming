@@ -7,5 +7,7 @@ url = argv[1]
 
 with request.urlopen(url) as response:
     header = response.headers
-    if 'X-Request-Id' in header:
-        print(header['X-Request-Id'])
+
+    var = header.get('X-Request-Id')
+    if var is not None:
+        print(var)
