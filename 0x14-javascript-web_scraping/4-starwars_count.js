@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
-const args = process.argv.slice(2);;
+const args = process.argv.slice(2);
 
 let result = 0;
 request(args[0], function (err, response, body) {
