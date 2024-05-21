@@ -1,18 +1,23 @@
 #!/usr/bin/node
 const request = require('request');
-const url = process.argv[2];
+const args = process.argv.slice(2);;
 
-request.get(url, (error, response, body) => {
-  if (error) {
-    console.log(error);
-  }
-  const films = JSON.parse(body).results;
-  let count = 0;
-  for (const film of films) {
-    const characters = film.characters;
-    if (characters.includes('https://swapi-api.alx-tools.com/api/people/18/') || characters.includes('http://swapi-api.alx-tools.com/api/people/18/')) {
-      count++;
+let result = 0;
+request(args[0], function (err, response, body) {
+  if (err) {
+    console.log(err);
+  } else {
+    const results = JSON.parse(body).results;
+    let i = 0;
+    for (i = 0; i < results.length; i++) {
+      let j = 0;
+      const character = results[i].characters;
+      for (j = 0; j < character.length; j++) {
+        if (character[j].includes('18')) {
+          result += 1;
+        }
+      }
     }
+    console.log(result);
   }
-  console.log(count);
 });
