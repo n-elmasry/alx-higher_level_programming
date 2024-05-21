@@ -10,7 +10,7 @@ request.get(url, (error, response, body) => {
   let count = 0;
   for (const film of films) {
     const characters = film.characters;
-    if (characters.includes('https://swapi-api.alx-tools.com/api/people/18/' || 'http://swapi-api.alx-tools.com/api/people/18/')) {
+    if (characters.includes('https://swapi-api.alx-tools.com/api/people/18/') || characters.includes('http://swapi-api.alx-tools.com/api/people/18/')) {
       count++;
     }
   }
