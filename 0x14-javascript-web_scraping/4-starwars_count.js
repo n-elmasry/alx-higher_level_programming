@@ -4,7 +4,7 @@ const url = process.argv[2];
 
 request.get(url, (error, response, body) => {
   if (error) {
-    console.error(error);
+    console.log(error);
   }
   const films = JSON.parse(body).results;
   let count = 0;
